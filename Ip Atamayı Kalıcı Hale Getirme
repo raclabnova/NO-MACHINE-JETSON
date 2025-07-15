@@ -1,3 +1,17 @@
 HER SEFERİNDE JETSON TARAFTADA LAPTOP TARAFINDADA PİNG ATAMAMAK İÇİN IP ADRESİNİ KALICI HALE GETİRMEK
 
 ****JETSON TARAFTA
+
+nmcli con show
+nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.100/24
+nmcli con mod "Wired connection 1" ipv4.method manual
+nmcli con mod "Wired connection 1" connection.autoconnect yes
+
+
+*****LAPTOP TARAFTA
+
+nmcli con show
+nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.10/24
+nmcli con mod "Wired connection 1" ipv4.method manual
+nmcli con mod "Wired connection 1" connection.autoconnect yes
+
